@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">Creme_project</string>
+    <string name="subtitle">A Full Circle of Flavor in Every Cake We Bake.</string>
+    <string name="start_textButton">Start</string>
+    <string name="get_started_textBtn">Get Started</string>
 </resources>

@@ -1,16 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="16dp"
+    android:padding="20dp"
+    android:background="@color/white"
     tools:context=".MainActivity">
 
     <ImageView
+        android:id="@+id/logo1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/logo1"
-        android:src="@drawable/title"/>
+        android:layout_marginTop="32dp"
+        android:src="@drawable/title"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter" />
 
-</LinearLayout>
+    <FrameLayout
+        android:id="@+id/body_splashscreen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/logo1">
+
+        <include layout="@layout/body_splashscreen" />
+    </FrameLayout>
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="16dp"
+        android:text="@string/get_started_textBtn"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+</RelativeLayout>
