@@ -4,4 +4,8 @@
     <string name="start_textButton">Start</string>
     <string name="get_started_textBtn">Get Started</string>
     <string name="category_title">All Categories</string>
+    <string name="menu_icon">Menu Icon</string>
+    <string name="home_icon">Home Icon</string>
+    <string name="cart_icon">Cart Icon</string>
+    <string name="search_field">   Search</string>
 </resources>
