@@ -1,8 +1,11 @@
 package com.example.creme_project;
 
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 
 import androidx.activity.EdgeToEdge;
@@ -22,18 +25,14 @@ public class MainActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_main);
 
-
-        ImageView imageView = findViewById(R.id.logo1);
-
-        try {
-            InputStream inputStream = getAssets().open("logo.png");
-
-            Bitmap bitmapImage = BitmapFactory.decodeStream(inputStream);
-
-            imageView.setImageBitmap(bitmapImage);
-
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
+        Button button = findViewById(R.id.get_started_btn);
+        //move to homepage
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, homepage.class);
+                startActivity(intent);
+            }
+        });
     }
 }
