@@ -8,4 +8,6 @@
     <string name="home_icon">Home Icon</string>
     <string name="cart_icon">Cart Icon</string>
     <string name="search_field">Search here!</string>
+    <string name="detail_description_text"><![CDATA[Kue cokelat premium yang kaya rasa cokelat dengan isian kacang almond dan hazelnut yang melimpah.]]></string>
+    <string name="detail_value_text">0</string>
 </resources>
