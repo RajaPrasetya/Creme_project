@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <!--  Media  -->
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:scaleType="centerInside"
+            android:contentDescription="cake icon"
+            android:src="@drawable/trilogy"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp">
+            <!--   Title    -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Signature Trilogy Whole Cake"
+                android:textSize="14sp"
+                android:textAlignment="center"
+                android:textColor="@color/semiBlack"
+                android:layout_gravity="center"
+                android:textAppearance="?attr/textAppearanceTitleMedium"/>
+            <!--   Price    -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rp 444.000"
+                android:textSize="16sp"
+                android:layout_gravity="center"
+                android:textColor="@color/primaryColor"
+                android:textFontWeight="500"
+                android:textAppearance="?attr/textAppearanceBody1"/>
+        </LinearLayout>
+    </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+</merge>
