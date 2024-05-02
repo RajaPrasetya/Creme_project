@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailPage">
+<!--    appbar -->
+    <include
+        android:layout_margin="20dp"
+        android:id="@+id/app_bar"
+        layout="@layout/app_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" />
+<!--    detail image -->
+    <ImageView
+        android:id="@+id/detail_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/app_bar"
+        android:src="@drawable/trilogy"/>
+<!--    title -->
+    <TextView
+        android:id="@+id/detail_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:layout_below="@id/detail_image"
+        android:text="Signature Trilogy Whole Cake"
+        android:textSize="20sp"
+        android:textStyle="bold"/>
+<!--   rating etc.  -->
+    <LinearLayout
+        android:id="@+id/detail_etc"
+        android:layout_below="@id/detail_title"
+        android:layout_marginTop="24dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="20dp"
+        android:orientation="horizontal">
+<!--        rating -->
+        <TextView
+            android:id="@+id/rating_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="4.8"
+            app:drawableLeftCompat="@drawable/star"
+            android:drawablePadding="10dp"
+            android:textSize="14sp"
+            android:textStyle="normal"/>
+
+<!--        shipment -->
+        <TextView
+            android:id="@+id/shipment_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            app:drawableLeftCompat="@drawable/truk"
+            android:drawablePadding="10dp"
+            android:text="Free"
+            android:textSize="14sp"
+            android:textStyle="normal"/>
+
+<!--        time-->
+        <TextView
+            android:id="@+id/time_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            app:drawableLeftCompat="@drawable/clock"
+            android:drawablePadding="10dp"
+            android:text="20 min"
+            android:textSize="14sp"
+            android:textStyle="normal"/>
+    </LinearLayout>
+<!--    description -->
+    <TextView
+        android:id="@+id/detail_description"
+        android:layout_below="@id/detail_etc"
+        android:layout_marginTop="24dp"
+        android:paddingHorizontal="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/detail_description_text"
+        android:justificationMode="inter_word"
+        android:lineHeight="20sp"
+        android:textFontWeight="300"/>
+
+<!--    size -->
+    <LinearLayout
+        android:id="@+id/detail_size"
+        android:layout_below="@id/detail_description"
+        android:layout_marginTop="24dp"
+        android:paddingHorizontal="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_gravity="center_vertical"
+            android:id="@+id/size_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SIZE:"
+            android:textSize="14sp"
+            android:textStyle="normal"/>
+        <com.google.android.material.button.MaterialButtonToggleGroup
+            android:id="@+id/toggleButton"
+            android:layout_marginStart="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:singleSelection="true">
+            <Button
+                style="?attr/materialButtonOutlinedStyle"
+                android:id="@+id/button1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="10"
+                app:rippleColor="@color/primaryColor"
+                android:backgroundTintMode="src_in"
+                />
+            <Button
+                style="?attr/materialButtonOutlinedStyle"
+                android:id="@+id/button2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="14"
+                app:rippleColor="@color/primaryColor"
+                />
+            <Button
+                style="?attr/materialButtonOutlinedStyle"
+                android:id="@+id/button3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="16"
+                app:rippleColor="@color/primaryColor"
+                />
+        </com.google.android.material.button.MaterialButtonToggleGroup>
+
+    </LinearLayout>
+    <!--        price and button cart -->
+    <LinearLayout
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:paddingHorizontal="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <!--        price       -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:orientation="horizontal">
+<!--            price layout-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Price"
+                    android:textFontWeight="300"
+                    android:textSize="14sp"/>
+                <TextView
+                    android:id="@+id/price_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rp 250.000"
+                    android:textColor="@color/primaryColor"
+                    android:textSize="22sp"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+<!--            button add and decrease layout-->
+            <LinearLayout
+                android:background="@drawable/rounded_background"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+                <Button
+                    style="?attr/materialIconButtonFilledStyle"
+                    android:id="@+id/increaseButton"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:backgroundTint="@color/lightGrey"
+                    app:icon="@drawable/baseline_add_24"
+                    />
+                <TextView
+                    android:id="@+id/valueText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="10dp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:text="@string/detail_value_text" />
+
+                <Button
+                    style="?attr/materialIconButtonFilledStyle"
+                    android:id="@+id/decreaseButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:backgroundTint="@color/lightGrey"
+                    app:icon="@drawable/baseline_remove_24"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+        <!--        button cart       -->
+<com.google.android.material.button.MaterialButton
+            android:id="@+id/cart_button"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:backgroundTint="@color/primaryColor"
+            android:text="Add to Cart"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+    </LinearLayout>
+</RelativeLayout>
