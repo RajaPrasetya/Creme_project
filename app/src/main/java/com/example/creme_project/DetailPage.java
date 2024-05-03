@@ -22,6 +22,7 @@ public class DetailPage extends AppCompatActivity {
         TextView textView = findViewById(R.id.valueText);
         Button increase = findViewById(R.id.increaseButton);
         Button decrease = findViewById(R.id.decreaseButton);
+        Button back = findViewById(R.id.backButton);
         toggleButton.addOnButtonCheckedListener(new MaterialButtonToggleGroup.OnButtonCheckedListener() {
             @Override
             public void onButtonChecked(MaterialButtonToggleGroup materialButtonToggleGroup, int i, boolean b) {
@@ -51,7 +52,10 @@ public class DetailPage extends AppCompatActivity {
             textView.setText(String.valueOf(value));
         });
 
-
+        // function to go back to the previous page
+        back.setOnClickListener(v -> {
+            finish();
+        });
     }
 
 }
