@@ -1,5 +1,6 @@
 package com.example.creme_project;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.TextView;
@@ -23,6 +24,7 @@ public class DetailPage extends AppCompatActivity {
         Button increase = findViewById(R.id.increaseButton);
         Button decrease = findViewById(R.id.decreaseButton);
         Button back = findViewById(R.id.backButton);
+        Button share = findViewById(R.id.shareButton);
         toggleButton.addOnButtonCheckedListener(new MaterialButtonToggleGroup.OnButtonCheckedListener() {
             @Override
             public void onButtonChecked(MaterialButtonToggleGroup materialButtonToggleGroup, int i, boolean b) {
@@ -55,6 +57,17 @@ public class DetailPage extends AppCompatActivity {
         // function to go back to the previous page
         back.setOnClickListener(v -> {
             finish();
+        });
+
+        // function to share the current value of the text view
+        share.setOnClickListener(v -> {
+           Intent shareIntent = new Intent(Intent.ACTION_SEND);
+              shareIntent.setType("text/plain");
+              String shareBody = "Here is the share content body";
+              String shareSubject = "Here is the share subject";
+                shareIntent.putExtra(Intent.EXTRA_TEXT, shareBody);
+                shareIntent.putExtra(Intent.EXTRA_SUBJECT, shareSubject);
+                startActivity(Intent.createChooser(shareIntent, "Share using"));
         });
     }
 

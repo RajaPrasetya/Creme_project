@@ -81,7 +81,7 @@
             android:id="@+id/shipment_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="40dp"
+            android:layout_marginStart="10dp"
             app:drawableLeftCompat="@drawable/truk"
             android:drawablePadding="10dp"
             android:text="Free"
@@ -89,16 +89,26 @@
             android:textStyle="normal"/>
 
 <!--        time-->
+
         <TextView
             android:id="@+id/time_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="40dp"
+            android:layout_weight="1"
+            android:layout_marginStart="10dp"
             app:drawableLeftCompat="@drawable/clock"
             android:drawablePadding="10dp"
             android:text="20 min"
             android:textSize="14sp"
             android:textStyle="normal"/>
+        <Button
+            style="?attr/materialIconButtonStyle"
+            android:id="@+id/shareButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:icon="@drawable/baseline_share_24"
+            app:iconTint="@color/primaryColor"
+            />
     </LinearLayout>
 <!--    description -->
     <TextView
