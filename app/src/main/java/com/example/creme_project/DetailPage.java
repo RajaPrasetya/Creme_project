@@ -61,12 +61,15 @@ public class DetailPage extends AppCompatActivity {
 
         // function to share the current value of the text view
         share.setOnClickListener(v -> {
+            String shareTitle = "Share Product";
+            String shareDescription = "I have shared the product with you";
+            String shareLink = "https://www.example.com";
+
+            String shareMessage = shareTitle + "\n" + shareDescription + "\n" + shareLink;
            Intent shareIntent = new Intent(Intent.ACTION_SEND);
               shareIntent.setType("text/plain");
-              String shareBody = "Here is the share content body";
-              String shareSubject = "Here is the share subject";
-                shareIntent.putExtra(Intent.EXTRA_TEXT, shareBody);
-                shareIntent.putExtra(Intent.EXTRA_SUBJECT, shareSubject);
+                shareIntent.putExtra(Intent.EXTRA_SUBJECT, shareTitle);
+                shareIntent.putExtra(Intent.EXTRA_TEXT, shareMessage);
                 startActivity(Intent.createChooser(shareIntent, "Share using"));
         });
     }
